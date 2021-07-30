@@ -62,19 +62,7 @@
 	height: 50px;
 	width: 50px;
 	vertical-align: bottom;
-}
-
-.search-container-mobile {
-	position: relative;
-	display: none;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: .1em;
-    margin-left: 420px;  
-    margin-top: 10px; 
-	/* margin: 4px 2px; */
-	height: 50px;
-	width: 50px;
-	vertical-align: bottom;
+    z-index: 5; 
 }
 
 .mglass {
@@ -283,11 +271,11 @@
     }
 }
 
-@media (max-width: 600px) {
-.search-container-mobile {
+/* @media (max-width: 600px) {
+.mobile-search-container {
     display: inline-block;
     }
-}
+} */
 
 /* // MOBILE VIEW */
 @media (max-width: 450px) {
@@ -316,10 +304,10 @@
     cursor: pointer; 
     }
 
-.search-container-mobile {
+/* .mobile-search-container {
     margin-left: 350px; 
     margin-top: 10px; 
-    }
+    } */
 }
 
 /* ============ small devices .end// ============ */
@@ -342,17 +330,7 @@
  </button>
 
   <div class="collapse navbar-collapse" id="main_nav">
-
-
     <ul class="navbar-nav ms-auto">
-         <!-- // search bar  -->
- <div class="search-container-mobile">
-    <form action="/search" method="get">
-      <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
-      <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
-    </form>
-  </div>
-<!-- end of search bar  -->
         <li class="nav-item"><a class="nav-link" style="color:black" href="#"> REPORTS</a></li>
         <li class="nav-item dropdown">
             <a class="nav-link  dropdown-toggle" style="color:black; margin-right: -100px;" href="#" data-bs-toggle="dropdown">MY ACCOUNT</a>

@@ -21,6 +21,125 @@
 
 <style type="text/css">
 /* ============ desktop view ============ */
+/* search bar */
+.button {
+	display: inline-block;
+	/* margin: 4px 2px; */
+	background-color: white; 
+	font-size: 14px;
+	padding-left: 32px;
+	padding-right: 32px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.button:hover {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search-container {
+	position: relative;
+	display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .1em;
+    margin-right: 90px; 
+    margin-top: -50px; 
+	/* margin: 4px 2px; */
+	height: 50px;
+	width: 50px;
+	vertical-align: bottom;
+}
+
+.search-container-mobile {
+	position: relative;
+	display: none;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .1em;
+    margin-left: 420px;  
+    margin-top: 10px; 
+	/* margin: 4px 2px; */
+	height: 50px;
+	width: 50px;
+	vertical-align: bottom;
+}
+
+.mglass {
+	display: inline-block;
+    color: black; 
+	pointer-events: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+.searchbutton {
+	position: absolute;
+	font-size: 22px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search {
+	position: absolute;
+	left: 49px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+	background-color: white;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+#searchright {
+    letter-spacing: .05em;
+    font-size: 14px; 
+}
+
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+}
+
+.expandright {
+	left: auto;
+	right: 49px; /* Button width-1px */
+}
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
+/* // end of search bar */
+
 .navbar-brand,.nav-item, .nav-link, .dropdown-menu {
     color: black; 
     font-family: 'Raleway', sans-serif;
@@ -33,8 +152,7 @@
 }
 
 .nav-link {
-    margin-right: 20px; 
-    margin-left: 10px;
+    margin-left: 20px;
     font-family: 'Raleway', sans-serif;
     margin-top: 70px; 
     color: black;   
@@ -125,6 +243,10 @@
     .nav-link {
     margin-top: 10px;
     }
+
+    .search-container {
+	display: none; 
+}
 }   
 
 @media (max-width: 750px) {
@@ -153,8 +275,14 @@
     }
 
 .dashboard-text {
-    font-size: 15px; 
+    font-size: 30px; 
+    }
 }
+
+@media (max-width: 600px) {
+.search-container-mobile {
+    display: inline-block
+    }
 }
 
 /* // MOBILE VIEW */
@@ -207,9 +335,17 @@
 
 
     <ul class="navbar-nav ms-auto">
+         <!-- // search bar  -->
+ <div class="search-container-mobile">
+    <form action="/search" method="get">
+      <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+      <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+    </form>
+  </div>
+<!-- end of search bar  -->
         <li class="nav-item"><a class="nav-link" style="color:black" href="#"> REPORTS</a></li>
         <li class="nav-item dropdown">
-            <a class="nav-link  dropdown-toggle" style="color:black" href="#" data-bs-toggle="dropdown">MY ACCOUNT</a>
+            <a class="nav-link  dropdown-toggle" style="color:black; margin-right: -100px;" href="#" data-bs-toggle="dropdown">MY ACCOUNT</a>
             <ul class="dropdown-menu dropdown-menu-right">
               <li><a class="dropdown-item" href="#">Clients</a>
                 <ul class="submenu submenu-left dropdown-menu">
@@ -256,6 +392,16 @@
     </ul>
   </div> <!-- navbar-collapse.// -->
  </div> <!-- container-fluid.// -->
+
+ <!-- // search bar  -->
+ <div class="search-container">
+    <form action="/search" method="get">
+      <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+      <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+    </form>
+  </div>
+<!-- end of search bar  -->
+
 </nav>
 <!-- ============= COMPONENT END// ============== -->
 

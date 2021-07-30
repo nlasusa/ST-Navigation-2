@@ -64,18 +64,22 @@
 .dashboard {
     margin: auto; 
     margin-top: 80px; 
-    border: .5px solid black; 
+    background-color: rgb(44, 44, 44);
+    /* background-color: rgba(248,249,250,255); */
     width: 100%; 
     height: 100%; 
     z-index: 3; 
 }
 
-#graph1 {
-    margin-left: 200px; 
-}
-
-#graph1, #graph2, #graph3 {
-    padding: 30px; 
+.dashboard-text {
+    font-size: 30px; 
+    font-family: 'Raleway', sans-serif;
+    font-weight: thin; 
+    letter-spacing: .1em;
+    padding-left: 40px;
+    padding-top: 40px; 
+    padding-bottom: 40px; 
+    color: white; 
 }
 /* // end of example dashboard to display transparency of nav bar (not needed for nav bar) */
 
@@ -128,7 +132,7 @@
     margin-top: 10px;
     }
 
-    #ST-logo {
+#ST-logo {
     width: 180px; 
     }
 
@@ -144,12 +148,14 @@
     margin-top: 15px;
     }
 
-#graph1, #graph2, #graph3 {
-    width: 150px; 
-    margin-left: 0px; 
+.dashboard {
+    margin-top: 40px; 
     }
-}   
 
+.dashboard-text {
+    font-size: 15px; 
+}
+}
 
 /* // MOBILE VIEW */
 @media (max-width: 450px) {
@@ -169,9 +175,8 @@
     margin-top: 15px;
     }
 
-#graph1, #graph2, #graph3 {
-    padding: 3px; 
-    width: 120px; 
+.dashboard-text {
+    font-size: 15px; 
 }
 }
 /* ============ small devices .end// ============ */
@@ -251,7 +256,9 @@
 
 <!-- // example of dashboard just to show transparency of nav bar -->
 <div class="container">
- <div class="dashboard"><img src="graph1.png" id="graph1"><img src="graph2.png" id="graph2"><img src="graph3.png" id="graph3"></div>
+    <div class="dashboard">
+        <div class="dashboard-text">EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD EXAMPLE DASHBOARD</div>
+    </div>
 </div>
 <!-- // end of example of dashboard just to show transparency of nav bar -->
 

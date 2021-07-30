@@ -53,6 +53,21 @@
     margin-left: 15px; 
 }
 
+.dropdown-menu {
+    border: none; 
+    opacity: 0.97; 
+    background-color: white; 
+    z-index: 4; 
+}
+
+.dashboard {
+    margin: auto; 
+    margin-top: 80px; 
+    width: 1200px;
+    background-color: rgba(248,249,250,255);
+    height: 390px; 
+}
+
 
 @media all and (min-width: 992px) {
     .dropdown-menu li{
@@ -80,7 +95,6 @@
     .dropdown-menu > li:hover > .submenu{
         display: block;
     }
-
 }   
 /* ============ desktop view .end// ============ */
 
@@ -173,6 +187,10 @@
                                 <ul class="submenu submenu-left dropdown-menu">
                                     <li><a class="dropdown-item" href="">Client #1</a></li>
                                     <li><a class="dropdown-item" href="">Client #1</a></li>
+                                    <li><a class="dropdown-item" href="">Client #1</a></li>
+                                    <li><a class="dropdown-item" href="">Client #1</a></li>
+                                    <li><a class="dropdown-item" href="">Client #1</a></li>
+                                    <li><a class="dropdown-item" href="">Client #1</a></li>
                                 </ul>
                             <li><a class="dropdown-item" href="">Client #1</a>
                                 <ul class="submenu submenu-left dropdown-menu">
@@ -184,9 +202,16 @@
                     <li><a class="dropdown-item" href="">Client #3</a>
                         <ul class="submenu submenu-left dropdown-menu">
                             <li><a class="dropdown-item" href="">Client #3</a>
+                            <li><a class="dropdown-item" href="">Client #3</a>
+                            <li><a class="dropdown-item" href="">Client #3</a>
+                            <li><a class="dropdown-item" href="">Client #3</a>
                                 <ul class="submenu submenu-left dropdown-menu">
                                     <li><a class="dropdown-item" href="">Client #3</a></li>
-                                    <li><a class="dropdown-item" href="">Client #3</a></li>
+                                    <li><a class="dropdown-item" href="">Client #3</a>
+                                        <ul class="submenu submenu-left dropdown-menu">
+                                            <li><a class="dropdown-item" href="">Client #3</a></li>
+                                            <li><a class="dropdown-item" href="">Client #3</a></li>
+                                        </ul>
                                 </ul>
                         </ul>
                  </ul>
@@ -201,6 +226,12 @@
  </div> <!-- container-fluid.// -->
 </nav>
 <!-- ============= COMPONENT END// ============== -->
+
+<!-- // example of dashboard just to show transparency of nav bar -->
+<div class="container">
+ <div class="dashboard"></div>
+</div>
+<!-- // end of example of dashboard just to show transparency of nav bar -->
 
 
  <!-- // JS -->

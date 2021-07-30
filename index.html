@@ -55,18 +55,30 @@
 
 .dropdown-menu {
     border: none; 
-    opacity: 0.97; 
+    opacity: 0.99; 
     background-color: white; 
     z-index: 4; 
 }
 
+/* // just example dashboard to display transparency of nav bar (not needed for nav bar) */
 .dashboard {
     margin: auto; 
     margin-top: 80px; 
-    width: 1200px;
-    background-color: rgba(248,249,250,255);
-    height: 390px; 
+    border: .5px solid black; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 3; 
 }
+
+#graph1 {
+    margin-left: 200px; 
+}
+
+#graph1, #graph2, #graph3 {
+    padding: 30px; 
+}
+/* // end of example dashboard to display transparency of nav bar (not needed for nav bar) */
+
 
 
 @media all and (min-width: 992px) {
@@ -130,6 +142,11 @@
 
 .navbar-toggler {
     margin-top: 15px;
+    }
+
+#graph1, #graph2, #graph3 {
+    width: 150px; 
+    margin-left: 0px; 
     }
 }   
 
@@ -229,7 +246,7 @@
 
 <!-- // example of dashboard just to show transparency of nav bar -->
 <div class="container">
- <div class="dashboard"></div>
+ <div class="dashboard"><img src="graph1.png" id="graph1"><img src="graph2.png" id="graph2"><img src="graph3.png" id="graph3"></div>
 </div>
 <!-- // end of example of dashboard just to show transparency of nav bar -->
 
